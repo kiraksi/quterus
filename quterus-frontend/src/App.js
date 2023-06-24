@@ -1,25 +1,77 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { useState } from 'react';
+import uterusPic from './assets/uterus-pic.png';
+import Cards from './components/Cards.js';
 
-function App() {
+const QUESTIONS = [
+  {
+    topic: "Menstrual Cycle",
+    question: "Question 1?",
+    answerOptions: [
+        { answerText: "Answer 1",
+          isCorrect: true,
+          _id: "6497122d8b7852503441b051"},
+        { answerText: "Answer 2",
+          isCorrect: false,
+          _id: "6497122d8b7852503441b052"},
+        { answerText: "Answer 3",
+          isCorrect: false,
+          _id: "6497122d8b7852503441b053"},
+        { answerText: "Answer 1",
+          isCorrect: false,
+          _id: "6497122d8b7852503441b054"}
+    ],
+    _id: "6497122d8b7852503441b050",
+    __v: 0
+}];
+
+
+const App = () => {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+	const [showScore, setShowScore] = useState(false);
+	const [score, setScore] = useState(0);
+
+  const cardChange = (isCorrect) => {
+		if (isCorrect) {
+			setScore(score + 1);
+		};
+
+		const nextQuestion = currentQuestion + 1;
+		if (nextQuestion < QUESTIONS.length) {
+			setCurrentQuestion(nextQuestion);
+		} else {
+			setShowScore(true);
+		};
+  }
+// react router for different pages
+// api for chatgpt or google bard -> use for questions, may give weird results
+// deploy with Computer Engine -> virtual machine -> use cloud run, app engine for easiest way to deploy (google for this)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <body class="page">
+      <header>
+        <h1>qUterus</h1>
+        <h2>How well do you know the uterus?</h2>
       </header>
-    </div>
+      <div class="content">
+        <main class="contentMain">
+          <div class="uterus-graphic"><img className="bounce" id="uterus-pic" src={uterusPic} alt="Girl in a jacket"/></div>
+          <div class="cards">
+            <Cards questions={QUESTIONS} currentQuestion={currentQuestion} showScore={showScore} score={score} cardChange={cardChange}/>
+          </div>
+        </main>
+        <nav class="nav">
+          <ul>
+            <li>Endometriosis,</li>
+            <li>PCOS</li>
+            <li>PMDD</li>
+            <li>ontraceptives</li>
+          </ul>
+        </nav>
+      </div>
+      <footer>Footer</footer>
+    </body>
   );
-}
+};
 
 export default App;
