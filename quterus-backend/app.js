@@ -18,4 +18,8 @@ app.use('/questions', questionsRoute);
 mongoose.connect(process.env.DB_CONNECTION);
 
 //Listen to server
-app.listen(8080);
+const PORT = 8080;
+const HOST = '0.0.0.0';
+app.listen(PORT, HOST, () => {
+    console.log(`Running on http://${HOST}:${PORT}`);
+});
