@@ -26,7 +26,6 @@ const QUESTIONS = [
     __v: 0
 }];
 
-
 const App = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
