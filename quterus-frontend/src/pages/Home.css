@@ -1,0 +1,60 @@
+body {
+    background-color: rgba(249,241,241,255);
+}
+
+h1 {
+    color: rgb(236,97,87);
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-family: 'Bradley Hand', 'cursive';
+    font-weight: lighter;
+}
+.home-page {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    background-image: url("../assets/background-image.jpg");
+    background-size:cover;
+    align-content: space-between;
+    padding: 10px;
+    gap: 20px;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links-open {
+    display: flex;
+    gap: 20px;
+}
+
+#link {
+    padding: 5px;
+}
+
+.box {
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+}
+
+.bounce-4 {
+    animation-name: bounce-4;
+    animation-timing-function: ease;
+}
+@keyframes bounce-4 {
+    0%   { transform: scale(1,1)    translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(-100px); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
+}
