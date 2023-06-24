@@ -40,9 +40,8 @@ router.get('/:topic', async (req, res) => {
 // Delete a specific question
 router.delete('/:id', async (req, res) => {
     try {
-        await Question.remove({ id: req.params.id});
-        console.log(req.params.id);
-        // res.json(removedQuestion);
+        const removedQuestion = await Question.findByIdAndRemove(req.params.id);
+        res.json(removedQuestion);
     } catch (err) {
         res.json({message: err});
     }
