@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const QuestionSchema = mongoose.Schema({
-    id: Number,
+    topic: String,
     question: String,
     answerOptions: [
         {
@@ -22,3 +22,5 @@ const QuestionSchema = mongoose.Schema({
         }
     ]
 });
+
+module.exports = mongoose.model('Questions', QuestionSchema);
