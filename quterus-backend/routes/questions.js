@@ -47,4 +47,19 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+// Update a question
+router.patch('/:id', async (req, res) => {
+    try {
+        const updatedQuestion = await Question.findByIdAndUpdate(
+            req.params.id,
+            {topic: req.body.topic,
+            question: req.body.question,
+            answerOptions: req.body.answerOptions}
+            );
+        res.json(updatedQuestion);
+    } catch (err) {
+        res.json({message: err});
+    }
+});
+
 module.exports = router;
