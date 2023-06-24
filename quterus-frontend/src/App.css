@@ -19,7 +19,8 @@ h2 {
   margin: 0;
   background-image: url("./assets/background-image.jpg");
   background-size:cover;
-  align-content: space-between,
+  align-content: space-between;
+  padding: 10px;
 }
 .content {
   display: flex;
@@ -41,14 +42,39 @@ h2 {
   /* put the nav on the left */
   flex: 0 0 15em;
   order: -1;
-  background: salmon;
+  background: rgba(250, 128, 114, 0.5);
   margin: 0px 0px 0px 10px;
+  border-radius: 25px;
+}
+
+.topics {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#topic-buttons {
+  padding: 5px;
+  margin: 0px 0px 10px 0px;
+}
+
+#topic-buttons:hover {
+  background-color: white;
+}
+
+.random {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 header, footer {
   flex: 0 0 15vh;
   display: flex;
-  gap: 200px;
+  gap: 150px;
   align-items: center;
   padding: 0px 0px 50px 25px;
 }

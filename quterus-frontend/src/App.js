@@ -61,12 +61,19 @@ const App = () => {
           </div>
         </main>
         <nav class="nav">
-          <ul>
-            <li>Endometriosis,</li>
-            <li>PCOS</li>
-            <li>PMDD</li>
-            <li>ontraceptives</li>
-          </ul>
+          <section className="topics">
+            <div className="Menstrual Cycle">
+              <h3>Menstrual Cycle</h3>
+              <button id="topic-buttons">Endometriosis</button>
+              <button id="topic-buttons">PCOS</button>
+              <button id="topic-buttons">PMDD</button>
+              <button id="topic-buttons">Contraceptives</button>
+            </div>
+            <div className="random">
+              <h3>Want more practice? Ask our AI Utera</h3>
+              <button id="topic-buttons">Mesntruation Questions</button>
+            </div>
+          </section>
         </nav>
       </div>
       <footer>Footer</footer>
