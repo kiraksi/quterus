@@ -35,7 +35,6 @@ Kira: This was both of our first hackathon and our first project incorporating f
 Trang: This is our first hackathon and full-stack development experience; needless to say we both faced a lot of challenges but the knowledge and new skills learned are invaluable. My main responsibility is building the API for the backend and deployment using Google Cloud Storage, Google Cloud Run, and a customed domain. I used Nodejs, Expressjs, and incorporating MongoDB, all of which are new skills to me. Figuring out the complex infrastructure of Google Cloud and how different services work are by far the most challenging tasks. I learned how to integrate a customed domain on Google Cloud Storage and using Google Cloud Run to deploy a shared MongoDB cluster with Docker, which has been very intellectually stimulating and I learned a lot from this. I have currently been able configured the customed domain to Google Cloud Storage and established Docker with gcloud CLI. My current challenges are to host a interactive react web page and push docker images to Google Cloud services.
 
 ### Future Features
-Frontend
 - Create more quizzes on more topics related to women's health, with more specific choices/parameters for users
 - Show when quizzes are completed on some sort of dashboard, with scores from all quizzes
 - Add more animation and interactions with Qutera
