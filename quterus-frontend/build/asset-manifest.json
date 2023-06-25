@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "//github.com/kira-kaur-sidhu/quterus/static/css/main.532ec4ae.css",
+    "main.js": "//github.com/kira-kaur-sidhu/quterus/static/js/main.dd77b8e4.js",
+    "static/media/uterus-pic.png": "//github.com/kira-kaur-sidhu/quterus/static/media/uterus-pic.0b61b2bacecf6175d37a.png",
+    "static/media/background-image.jpg": "//github.com/kira-kaur-sidhu/quterus/static/media/background-image.c46d5444b07c0f01922f.jpg",
+    "index.html": "//github.com/kira-kaur-sidhu/quterus/index.html",
+    "main.532ec4ae.css.map": "//github.com/kira-kaur-sidhu/quterus/static/css/main.532ec4ae.css.map",
+    "main.dd77b8e4.js.map": "//github.com/kira-kaur-sidhu/quterus/static/js/main.dd77b8e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.532ec4ae.css",
+    "static/js/main.dd77b8e4.js"
+  ]
+}
