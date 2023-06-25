@@ -96,7 +96,7 @@ const Quiz = () => {
             </div>
             <div className="random">
               <h3>Want more practice? Ask our AI Utera</h3>
-              <button id="topic-buttons">Menstruation Questions</button>
+              <button id="topic-button-utera"><Link to="/aiquiz" style={{ textDecoration: 'none' }}><h1 id="topic-button-utera">Ask Utera</h1></Link></button>
             </div>
           </section>
         </nav>
