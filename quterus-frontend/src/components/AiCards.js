@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './Cards.css';
 
-const Cards = (props) => {
+const AiCards = (props) => {
     return (
         <div className='card'>
             {props.showScore ? (
@@ -29,10 +29,10 @@ const Cards = (props) => {
     );
 };
 
-Cards.propTypes = {
+AiCards.propTypes = {
     questions: PropTypes.arrayOf(
         PropTypes.shape({
-          _id: PropTypes.number.isRequired,
+          _id: PropTypes.string.isRequired,
           question: PropTypes.string.isRequired,
           answerOptions: PropTypes.arrayOf(
             PropTypes.shape({
@@ -43,7 +43,8 @@ Cards.propTypes = {
         })
       ).isRequired,
       score: PropTypes.number.isRequired,
+	  showScore: PropTypes.number.isRequired,
       cardChange: PropTypes.func.isRequired
 };
 
-export default Cards;
+export default AiCards;
