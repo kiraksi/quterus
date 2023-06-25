@@ -11,6 +11,7 @@ h1 {
 h2 {
     font-family: 'Bradley Hand', 'cursive';
     font-weight: lighter;
+    padding: 0px 0px 0px 10px;
 }
 .home-page {
     display: flex;
@@ -30,13 +31,32 @@ h2 {
     align-items: center;
 }
 
+.info-box {
+    background: rgba(250, 128, 114, 0.4);
+    margin: 0px 0px 0px 10px;
+    border-radius: 25px;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+}
+
+#info {
+    width: 600px;
+    text-align: center;
+    font-family: 'Bradley Hand', 'cursive';
+    font-size: large;
+}
+
 .links-open {
     display: flex;
     gap: 20px;
 }
 
 #link {
-    padding: 5px;
+    padding: 10px;
+    margin: 20px;
+    width: 100px;
+    color: black;
+
 }
 
 .box {

@@ -23,8 +23,13 @@
 
   /* QUESTION/LEFT SECTION */
 .question-section {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     width: 100%;
     position: relative;
+    text-align: center;
 }
 
 .question-count {
@@ -60,12 +65,19 @@ button {
     color: #252121;
     background-color: #f5e4e2;
     border-radius: 15px;
-    display: flex;
+    text-align: center;
+    display:table-cell;
+    vertical-align:middle;
     padding: 5px;
     justify-content: flex-start;
     align-items: center;
     border: 3px solid #8f3926;
     cursor: pointer;
+    
+}
+
+h3 {
+    text-align: center;
 }
 
 .correct {

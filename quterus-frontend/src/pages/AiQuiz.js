@@ -60,7 +60,7 @@ const AiQuiz = () => {
     return (
     <body className="page">
         <header>
-            <h1>qUterus</h1>
+            <h1>Quterus</h1>
             <h2>How well do you know the uterus?</h2>
         </header>
         <div className="content">

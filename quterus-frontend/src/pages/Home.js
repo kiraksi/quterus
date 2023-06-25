@@ -7,15 +7,17 @@ function Home() {
     return (
         <body className="home-page">
             <header>
-                <h1>qUterus</h1>
-                <h2>How well do you know the uterus?</h2>
+                <h1>Quterus</h1>
             </header>
             <div className="home-content">
                 <div className="uterus-graphic"><img className="box bounce-4" id="uterus-pic" src={uterusPic} alt="Girl in a jacket"/></div>
-                <p>Hi my name is Qutera! </p>
+                <div className="info-box">
+                    <p id="info">Welcome to Quterus - Quiz about the Uterus! We are a dedicated online platform designed to educate and empower individuals about all aspects of women’s reproductive health. Our mission is to provide a safe and informative space where everyone can learn, explore, and raise awareness about this essential topic. Our quizzes cover a wide range of subjects related to women’s reproductive health, including menstruation, reproductive health conditions, and more to come. Together, let’s empower ourselves and promote positive conversations around this vital aspect of life. Start quizzing now and embark on an enlightening journey toward reproductive health knowledge!
+                    Disclaimer: Our quizzes are not meant to replace professional medical advice. If you have specific concerns or questions about your reproductive health, we strongly recommend consulting a qualified healthcare provider. </p>
+                </div>
                 <div className='links-open'>
-                    <div id="link"><Link to="quiz">Quiz Game</Link></div>
-                    <Link to="aiquiz">Ai Quiz Game</Link>
+                    <button id="link"><Link to="quiz" style={{ textDecoration: 'none', color: 'black' }}>Quiz Game</Link></button>
+                    <button id="link"><Link to="aiquiz" style={{ textDecoration: 'none', color: 'black'}}>Ai Quiz Game</Link></button>
                 </div>
             </div>
         </body>
