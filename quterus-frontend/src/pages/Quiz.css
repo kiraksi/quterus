@@ -18,7 +18,7 @@ h2 {
     flex-direction: column;
     margin: 0;
     background-image: url("../assets/background-image.jpg");
-    background-size:cover;
+    background-size: 100% 100%; 
     align-content: space-between;
     padding: 10px;
 }
