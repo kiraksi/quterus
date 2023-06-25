@@ -27,7 +27,7 @@ Bard AI Script
 Deployment
 - Render
 - Google Cloud
-- Customed Domain
+- Customed Domain with Github Pages
 
 ### Things we Learned and Challenges We Faced:
 Kira: This was both of our first hackathon and our first project incorporating full-stack development. On the Frontend, I learned more on using react-router to load different pages from on file. I had issues with API asynchronous issues, but was able to use axios libaries to work around it. Creating the Qutera AI with the Bard AI Script was the hardest challenge for me, I originally intended to use ChatGPT's API that has a lot of integrations, but decided not to since it was expensive to use. Bard doesn't have any inbuilt API integrations, I found a python library that was able to return Bard's answers in the form of a large string, and then played around with prompts to populate an question/answer dict. I then had to hack my way through this huge string to turn it into a viable JSON library to eventually create my own Bard API from.
