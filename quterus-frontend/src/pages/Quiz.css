@@ -28,7 +28,7 @@ h2 {
 }
 .contentMain {
     display: flex;
-    flex-grow: 1;
+    height: 50vh;
     flex-direction: row;
     justify-content: center;
     align-items: center;

@@ -1,7 +1,9 @@
 import React from 'react';
 import './Quiz.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import uterusPic from '../assets/uterus-pic.png';
+import axios from "axios";
 import Cards from '../components/Cards';
 
 const QUESTIONS = [
@@ -27,9 +29,28 @@ const QUESTIONS = [
 }];
 
 const Quiz = () => {
+  const [topic, setTopic] = useState("Endometriosis")
+  const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
+
+  const API = '';
+
+  const getData = () => {
+    axios
+    .get(API)
+    .then((result) => {
+      setQuestions(result.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   const cardChange = (isCorrect) => {
 		if (isCorrect) {
@@ -47,19 +68,19 @@ const Quiz = () => {
 // api for chatgpt or google bard -> use for questions, may give weird results
 // deploy with Computer Engine -> virtual machine -> use cloud run, app engine for easiest way to deploy (google for this)
   return (
-    <body class="page">
+    <body className="page">
       <header>
-        <h1>qUterus</h1>
+        <Link to="/" style={{ textDecoration: 'none' }}><h1>qUterus</h1></Link>
         <h2>How well do you know the uterus?</h2>
       </header>
-      <div class="content">
-        <main class="contentMain">
-          <div class="uterus-graphic"><img className="bounce" id="uterus-pic" src={uterusPic} alt="Girl in a jacket"/></div>
-          <div class="cards">
+      <div className="content">
+        <main className="contentMain">
+          <div className="uterus-graphic"><img className="bounce" id="uterus-pic" src={uterusPic} alt="Girl in a jacket"/></div>
+          <div className="cards">
             <Cards questions={QUESTIONS} currentQuestion={currentQuestion} showScore={showScore} score={score} cardChange={cardChange}/>
           </div>
         </main>
-        <nav class="nav">
+        <nav className="nav">
           <section className="topics">
             <div className="Menstrual Cycle">
               <h3>Menstrual Cycle</h3>

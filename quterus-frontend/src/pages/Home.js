@@ -5,12 +5,12 @@ import uterusPic from '../assets/uterus-pic.png';
 
 function Home() {
     return (
-        <body class="home-page">
+        <body className="home-page">
             <header>
                 <h1>qUterus</h1>
                 <h2>How well do you know the uterus?</h2>
             </header>
-            <div class="home-content">
+            <div className="home-content">
                 <div className="uterus-graphic"><img className="box bounce-4" id="uterus-pic" src={uterusPic} alt="Girl in a jacket"/></div>
                 <p>Hi my name is Qutera! </p>
                 <div className='links-open'>

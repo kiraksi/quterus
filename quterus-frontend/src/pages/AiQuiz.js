@@ -1,7 +1,10 @@
 import React from 'react';
 import './Quiz.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import uterusPic from '../assets/uterus-pic.png';
+import AiCards from '../components/AiCards';
+
+const GPT_API_KEY = ""
 
 const AiQuiz = () => {
     const [questions, setQuestions] = useState([])
@@ -9,15 +12,22 @@ const AiQuiz = () => {
     const [showScore, setShowScore] = useState(false);
     const [score, setScore] = useState(0);
 
+    useEffect(() => {
+        let ignore = false;
+        
+        if (!ignore)  callOpenAIAPI()
+        return () => { ignore = true; }
+        },[]);
+
     async function callOpenAIAPI() {
         console.log("Calling the OpenAI API");
 
         const APIBody = {
-            "model": "text-davinci-003",
-            "prompt": "xxxx"
+            "model": "gpt-3.5-turbo",
+            "prompt": 'I want a question on the topic of menstruation diseases, it should ask the question based on the symptoms and there should be four answer options, where one is correct. Answer in JSON format with unique ids: { topic: "Menstrual-Cycle", question: "Question 1?", answerOptions: [ { answerText: "Answer 1", isCorrect: true, _id: "6497122d8b7852503441b051"}, { answerText: "Answer 2", isCorrect: false, _id: "6497122d8b7852503441b052"}, { answerText: "Answer 3", isCorrect: false, _id: "6497122d8b7852503441b053"}, { answerText: "Answer 1", isCorrect: false, _id: "6497122d8b7852503441b054"} ], _id: "6497122d8b7852503441b050", __v: 0 }];'
         }
         
-        await fetch("https://api.openai.com", {
+        await fetch("https://api.openai.com/v1/completions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -25,10 +35,10 @@ const AiQuiz = () => {
             },
             body: JSON.stringify(APIBody)
         }).then((data) => {
-            return data.json();
+            return data;
         }).then((data) => {
             console.log(data);
-            // create a new variable for this?
+            setQuestions([data])
         });
     }
 
@@ -48,19 +58,19 @@ const AiQuiz = () => {
 // api for chatgpt or google bard -> use for questions, may give weird results
 // deploy with Computer Engine -> virtual machine -> use cloud run, app engine for easiest way to deploy (google for this)
     return (
-    <body class="page">
+    <body className="page">
         <header>
             <h1>qUterus</h1>
             <h2>How well do you know the uterus?</h2>
         </header>
-        <div class="content">
-            <main class="contentMain">
-                <div class="uterus-graphic"><img className="bounce" id="uterus-pic" src={uterusPic} alt="Girl in a jacket"/></div>
-                <div class="cards">
-                    <Cards questions={questions} currentQuestion={currentQuestion} showScore={showScore} score={score} cardChange={cardChange}/>
+        <div className="content">
+            <main className="contentMain">
+                <div className="uterus-graphic"><img className="bounce" id="uterus-pic" src={uterusPic} alt="Girl in a jacket"/></div>
+                <div className="cards">
+                    <AiCards questions={questions} currentQuestion={currentQuestion} showScore={showScore} score={score} cardChange={cardChange}/>
                 </div>
             </main>
-            <nav class="nav">
+            <nav className="nav">
                 <section className="topics">
                     <div className="Menstrual Cycle">
                         <h3>Menstrual Cycle</h3>
