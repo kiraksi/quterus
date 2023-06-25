@@ -20,7 +20,7 @@ Bard AI Script
 - Python
 - Flask
 - Various Python libraries for Google Bard
-- Python multi-threading
+- Multi-processing
 
 Deployment
 - Render
