@@ -32,7 +32,7 @@ const Cards = (props) => {
 Cards.propTypes = {
     questions: PropTypes.arrayOf(
         PropTypes.shape({
-          _id: PropTypes.number.isRequired,
+          _id: PropTypes.string.isRequired,
           question: PropTypes.string.isRequired,
           answerOptions: PropTypes.arrayOf(
             PropTypes.shape({
@@ -43,6 +43,7 @@ Cards.propTypes = {
         })
       ).isRequired,
       score: PropTypes.number.isRequired,
+	  showScore: PropTypes.number.isRequired,
       cardChange: PropTypes.func.isRequired
 };
 
