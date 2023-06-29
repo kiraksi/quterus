@@ -1,5 +1,5 @@
 # Quterus - Interactive/AI Quiz about the Uteraus!
-### Created for the TechTogether Hackathon by MLH
+### Created for the TechTogether Hackathon by MLH - Prize Winner
 ### Team Members: Kira Sidhu, Trang Tran
 ## Project Description:
 Conversations about the uterus are hard and awkward, many women go unaware of the many health issues that can persist from the uterus. Although PCOS and Endometriosis affect over 30% of the population, it often takes years into adulthood for women to get checked out for symptoms, often bearing them because they believe it is their "normal", not to mention many of these health risks women face are underresearched and underfunded. That's why we decided to create this fun, itneractive website that help women learn more about their uterus, with our fun character called Utera! Utera asks you questions on different health issues specific to the uterus, she is even integrated with AI! We hope that to provide a safe and informative space where everyone across all ages can learn, explore, and raise awareness about this essential topic.
